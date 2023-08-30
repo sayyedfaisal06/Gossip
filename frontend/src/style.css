@@ -7,3 +7,17 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
+
+.authWrapper {
+  display: flex;
+  height: 100vh;
+
+  .authLeft,
+  .authRight {
+    flex: 1;
+  }
+
+  .authLeft {
+    background-color: #a9d6e5;
+  }
+}
