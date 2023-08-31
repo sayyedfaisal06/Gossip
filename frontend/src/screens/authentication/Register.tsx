@@ -1,7 +1,29 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Input, Button } from "../../components";
 
 const Register = () => {
+  const [registerForm, setRegisterForm] = useState({
+    fullname: "",
+    phoneNumber: "",
+    username: "",
+    email: "",
+    password: "",
+    cpassword: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setRegisterForm((prevValue: any) => ({
+      ...prevValue,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = () => {
+    // e.preventDefault();
+    console.log(registerForm);
+  };
+
   return (
     <div className="authWrapper">
       <div className="authLeft">Left</div>
@@ -19,6 +41,9 @@ const Register = () => {
             borderType="outline"
             customError={false}
             error="Full Name is required"
+            name="fullname"
+            value={registerForm.fullname}
+            onChange={handleChange}
           />
           <Input
             type="text"
@@ -27,6 +52,9 @@ const Register = () => {
             borderType="outline"
             customError={false}
             error="Username is required"
+            name="username"
+            value={registerForm.username}
+            onChange={handleChange}
           />
           <Input
             type="email"
@@ -35,6 +63,9 @@ const Register = () => {
             borderType="outline"
             customError={false}
             error="Email is required"
+            name="email"
+            value={registerForm.email}
+            onChange={handleChange}
           />
           <Input
             type="text"
@@ -43,6 +74,9 @@ const Register = () => {
             borderType="outline"
             customError={false}
             error="Phone is required"
+            name="phoneNumber"
+            value={registerForm.phoneNumber}
+            onChange={handleChange}
           />
           <div className="authPasswordInputs">
             <Input
@@ -52,6 +86,9 @@ const Register = () => {
               borderType="outline"
               customError={false}
               error="Password is required"
+              name="password"
+              value={registerForm.password}
+              onChange={handleChange}
             />
             <Input
               type="password"
@@ -60,11 +97,16 @@ const Register = () => {
               borderType="outline"
               customError={false}
               error="Confirm Password is required"
+              name="cpassword"
+              value={registerForm.cpassword}
+              onChange={handleChange}
             />
           </div>
         </div>
 
-        <Button variant="primary">Register</Button>
+        <Button onClick={handleSubmit} variant="primary">
+          Register
+        </Button>
         <p className="navigateLink">
           Already have an account? <Link to="/login">Login</Link>
         </p>
