@@ -18,6 +18,67 @@
   }
 
   .authLeft {
-    background-color: #a9d6e5;
+    background-color: #def3fa;
+  }
+
+  .authRight {
+    padding: 2rem;
+    width: 100%;
+
+    & button {
+      margin-top: 1rem;
+    }
+
+    .authWelcome {
+      & h2 {
+        font-weight: 900;
+        font-size: 32px;
+      }
+    }
+
+    .authInputs {
+      width: 100%;
+      margin-top: 2rem;
+
+      .authPasswordInputs {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+      }
+    }
+
+    .authInputs.login {
+      margin-top: 3rem;
+    }
+
+    .rememberMe {
+      display: flex;
+      gap: 1rem;
+
+      & label {
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      & input[type="checkbox"] {
+        width: 16px;
+        cursor: pointer;
+      }
+    }
+
+    .navigateLink {
+      text-align: center;
+      margin-top: 10px;
+
+      & a {
+        text-decoration: none;
+        color: #007bff;
+
+        &:hover {
+          color: #0056b3;
+        }
+      }
+    }
   }
 }

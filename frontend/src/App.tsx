@@ -6,11 +6,14 @@ import {
   Register,
   ResetPassword,
 } from "./screens";
+import RequireAuth from "./config/RequireAuth";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route element={<RequireAuth />}>
+        <Route path="/" element={<Home />} />
+      </Route>
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path="forgot-password" element={<ForgottenPassword />} />

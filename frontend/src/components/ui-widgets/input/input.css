@@ -1,0 +1,62 @@
+/* Input component styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  padding: 8px;
+  border: 2px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  width: 100%;
+}
+
+.input.outline {
+  border: 1.5px solid #ccc;
+}
+
+.input.bottom {
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+
+.input:focus {
+  border-color: #007bff;
+}
+
+.toggle-password-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 12px;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Optional label styles */
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
