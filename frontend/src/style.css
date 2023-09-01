@@ -19,6 +19,12 @@
 
   .authLeft {
     background-color: #def3fa;
+    display: grid;
+    place-items: center;
+
+    & img {
+      width: 70% !important;
+    }
   }
 
   .authRight {
@@ -53,17 +59,38 @@
 
     .rememberMe {
       display: flex;
-      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
 
-      & label {
-        font-size: 15px;
-        font-weight: 500;
-        cursor: pointer;
-      }
+      .check {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        & label {
+          font-size: 15px;
+          font-weight: 500;
+          cursor: pointer;
+          margin-top: 4px;
+        }
 
-      & input[type="checkbox"] {
-        width: 16px;
-        cursor: pointer;
+        & input[type="checkbox"] {
+          width: 16px;
+          cursor: pointer;
+        }
+
+        .navigateLink {
+          text-align: center;
+          margin-top: 10px;
+
+          & a {
+            text-decoration: none;
+            color: #007bff;
+
+            &:hover {
+              color: #0056b3;
+            }
+          }
+        }
       }
     }
 

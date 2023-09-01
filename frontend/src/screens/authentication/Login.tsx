@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { Input, Button } from "../../components";
+import LoginImg from "../../assets/login.svg";
 const Login = () => {
   return (
     <div className="authWrapper">
-      <div className="authLeft">Left</div>
+      <div className="authLeft">
+        <img src={LoginImg} alt="Login Image" />
+      </div>
       <div className="authRight">
         <div className="authWelcome">
           <h2>Welcome back,</h2>
@@ -27,18 +30,15 @@ const Login = () => {
             customError={false}
             error="Password is required"
           />
-          <Input
-            type="password"
-            showLabel={true}
-            labelText="Confirm Password"
-            borderType="outline"
-            customError={false}
-            error="Confirm Password is required"
-          />
         </div>
         <div className="rememberMe">
-          <input type="checkbox" name="remember" id="remember" />
-          <label htmlFor="remember">Remember Me</label>
+          <div className="check">
+            <input type="checkbox" name="remember" id="remember" />
+            <label htmlFor="remember">Remember Me</label>
+          </div>
+          <p className="navigateLink">
+            <Link to="/forgot-password">Forget Password</Link>
+          </p>
         </div>
         <Button variant="primary">Login</Button>
         <p className="navigateLink">

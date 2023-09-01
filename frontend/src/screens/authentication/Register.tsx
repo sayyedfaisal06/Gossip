@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Input, Button } from "../../components";
+import RegisterImg from "../../assets/register.svg";
 
 const Register = () => {
   const [registerForm, setRegisterForm] = useState({
@@ -26,7 +27,9 @@ const Register = () => {
 
   return (
     <div className="authWrapper">
-      <div className="authLeft">Left</div>
+      <div className="authLeft">
+        <img src={RegisterImg} alt="Register Image" />
+      </div>
       <div className="authRight">
         <div className="authWelcome">
           <h2>Welcome,</h2>
